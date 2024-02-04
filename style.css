@@ -1,3 +1,7 @@
+:root {
+  --std-border: 1px solid rgba(54, 69, 79, 40%);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -6,6 +10,8 @@
 
 body {
   height: 100vh;
+  background-image: url(images/fields.png);
+  background-size: cover;
 }
 
 main {
@@ -13,20 +19,33 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: rgba(54, 69, 79, 40%);
+  padding: 50px;
+  border: var(--std-border);
+  border-radius: 7px;
+}
+
+h1 {
+  text-align: center;
 }
 
 .user-input {
   padding: 10px;
+  padding-left: 0;
 }
 
 .user-input > input {
   padding-right: 50px;
   padding-left: 5px;
   padding-block: 10px;
-  border: 1px solid blue;
+  border: var(--std-border);
   border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
+h1,
 label {
+  color: white;
   display: block;
+  font-family: arial;
 }
