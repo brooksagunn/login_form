@@ -1,5 +1,6 @@
 :root {
   --std-border: 1px solid rgba(54, 69, 79, 40%);
+  --heading-size: 30px;
 }
 
 * {
@@ -14,38 +15,62 @@ body {
   background-size: cover;
 }
 
+input,
+button,
+label {
+  font-family: inherit;
+}
+
 main {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(54, 69, 79, 40%);
-  padding: 50px;
+  background-color: rgba(54, 69, 79, 0.4);
+  padding-block: 20px;
+  width: 500px;
   border: var(--std-border);
   border-radius: 7px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
   text-align: center;
+  font-size: var(--heading-size);
+  padding-block: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .user-input {
   padding: 10px;
-  padding-left: 0;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
 }
 
-.user-input > input {
-  padding-right: 50px;
+.user-input > input,
+button {
   padding-left: 5px;
   padding-block: 10px;
   border: var(--std-border);
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.2);
+  width: auto;
+}
+
+button {
+  background-color: rgba(24, 154, 211, 0.2);
+  color: white;
+  font-size: var(--heading-size);
 }
 
 h1,
 label {
   color: white;
   display: block;
-  font-family: arial;
 }
